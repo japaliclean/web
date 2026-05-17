@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogues | Cleaning Chemicals & Machinery | JAPALI</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Browse JAPALI's interactive product catalogues. Explore our premium range of heavy-duty machinery, housekeeping supplies, ergonomic mops, and hygiene products.">
+    <meta name="keywords" content="JAPALI products, cleaning chemicals, heavy-duty machinery, housekeeping supplies, hygiene products, mops and brushes, industrial cleaning catalogues">
+    <meta name="author" content="JAPALI">
+    <link rel="canonical" href="https://japalicare.com/products.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://japalicare.com/products.html">
+    <meta property="og:title" content="Product Catalogues | Cleaning Chemicals & Machinery | JAPALI">
+    <meta property="og:description" content="Browse JAPALI's interactive product catalogues. Explore our premium range of heavy-duty machinery, housekeeping supplies, ergonomic mops, and hygiene products.">
+    <meta property="og:image" content="https://japalicare.com/assets/images/logo%20final.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://japalicare.com/products.html">
+    <meta property="twitter:title" content="Product Catalogues | Cleaning Chemicals & Machinery | JAPALI">
+    <meta property="twitter:description" content="Browse JAPALI's interactive product catalogues. Explore our premium range of heavy-duty machinery, housekeeping supplies, ergonomic mops, and hygiene products.">
+    <meta property="twitter:image" content="https://japalicare.com/assets/images/logo%20final.png">
+    
+    <!-- Favicon Setup -->
+    <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/images/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- jQuery (kept for filtering logic) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .catalog-cover {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: none; /* Hidden until you add the images */
+            border: 1px solid var(--glass-border);
+        }
+        .catalog-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .catalog-item h3 {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="glass">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo%20final.png" alt="JAPALI Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="about.html">Who we are</a></li>
+            <li><a href="contact.html">Reach us at</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section-spacing">
+            <h1>Our <span style="color: var(--primary);">Product Catalogues</span></h1>
+            <p>Browse our precise formulations and engineered tools in our interactive flipbooks.</p>
+
+            <div class="filters" style="margin: 2.5rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn filter-btn active" data-filter="all" style="min-width: auto; padding: 0.5rem 1.5rem; border: 2px solid var(--primary);">All</button>
+                <button class="btn filter-btn" data-filter="machinery" style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Machinery</button>
+                <button class="btn filter-btn" data-filter="housekeeping" style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Housekeeping</button>
+                <button class="btn filter-btn" data-filter="mops" style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Mops &amp; Brushes</button>
+                <button class="btn filter-btn" data-filter="hygiene" style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Hygiene Products</button>
+            </div>
+
+            <div class="grid catalog-grid grid-4-col" style="margin-top: 2rem;">
+                <!-- Machinery -->
+                <div class="card glass brutalist catalog-item" data-category="machinery">
+                    <div class="catalog-icon">&#9881;&#65039;</div>
+                    <img src="assets/images/covers/machinery-cover.jpg" alt="Machinery Catalogue Cover" class="catalog-cover">
+                    <h3>Machinery Catalogue</h3>
+                    <p>Heavy-duty scrubbers, vacuum cleaners, and janitorial trolleys.</p>
+                    <a href="assets/products/1_Machinery_Catalogue.pdf" target="_blank" class="btn brutalist" style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View / Download</a>
+                </div>
+
+                <!-- Housekeeping -->
+                <div class="card glass brutalist catalog-item" data-category="housekeeping">
+                    <div class="catalog-icon">🧹</div>
+                    <img src="assets/images/covers/housekeeping-cover.jpg" alt="Housekeeping Catalogue Cover" class="catalog-cover">
+                    <h3>Housekeeping Catalogue</h3>
+                    <p>Essential cleaning supplies, chemicals, and everyday maintenance tools.</p>
+                    <a href="assets/products/2_Housekeeping_Catalogue.pdf" target="_blank" class="btn brutalist" style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View / Download</a>
+                </div>
+
+                <!-- Mops & Brushes -->
+                <div class="card glass brutalist catalog-item" data-category="mops">
+                    <div class="catalog-icon">🧽</div>
+                    <img src="assets/images/covers/mops-cover.jpg" alt="Mops & Brushes Catalogue Cover" class="catalog-cover">
+                    <h3>Mops &amp; Brushes Catalogue</h3>
+                    <p>Ergonomic mops, wipers, and specialized brushes for efficient manual cleaning.</p>
+                    <a href="assets/products/3_Mops_and_Brushes_Catalogue.pdf" target="_blank" class="btn brutalist" style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View / Download</a>
+                </div>
+
+                <!-- Hygiene Products -->
+                <div class="card glass brutalist catalog-item" data-category="hygiene">
+                    <div class="catalog-icon">🧴</div>
+                    <img src="assets/images/covers/hygiene-cover.jpg" alt="Hygiene Products Catalogue Cover" class="catalog-cover">
+                    <h3>Hygiene Products Catalogue</h3>
+                    <p>Premium HRT rolls, C-fold tissues, and personal care disinfection.</p>
+                    <a href="assets/products/4_Hygiene_Products_Catalogue.pdf" target="_blank" class="btn brutalist" style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View / Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass" style="padding: 4rem 10%; border-top: 1px solid var(--glass-border); margin-top: 4rem;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                    <img src="assets/images/logo%20final.png" alt="JAPALI Logo">
+                </a>
+                <p>Engineering cleanliness since 2024. Your partner in premium hygiene systems.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Pages</h4>
+                <ul style="list-style: none;">
+                    <li><a href="index.html" style="color: #888; text-decoration: none;">Home</a></li>
+                    <li><a href="products.html" style="color: #888; text-decoration: none;">Products</a></li>
+                    <li><a href="solutions.html" style="color: #888; text-decoration: none;">Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Contact</h4>
+                <p style="color: #888;">japali.hyd@gmail.com</p>
+                <p style="color: #888;">+91 98765 43210</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Social</h4>
+                <p style="color: #888;">Instagram</p>
+                <p style="color: #888;">LinkedIn</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; color: #555; font-size: 0.8rem;">
+            &copy; 2026 JAPALI. Blueprint for a Cleaner World. <br style="margin-top: 0.5rem;"> Project by- Ithish Jonnes
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js?v=2"></script>
+
+    <!-- Category filter (jQuery already loaded in <head>) -->
+    <script>
+
+        $(document).ready(function(){
+            $('.filter-btn').click(function(){
+                $('.filter-btn').css({ 'background': 'transparent', 'color': 'var(--primary)' }).removeClass('active');
+                $(this).css({ 'background': 'var(--primary)', 'color': '#fff' }).addClass('active');
+                var filterValue = $(this).attr('data-filter');
+                if (filterValue === 'all') {
+                    $('.catalog-item').fadeIn(300);
+                } else {
+                    $('.catalog-item').hide();
+                    $('.catalog-item[data-category="' + filterValue + '"]').fadeIn(300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
