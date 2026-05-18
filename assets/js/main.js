@@ -56,4 +56,78 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card, .brutalist, h1, h2').forEach(el => {
         revealObserver.observe(el);
     });
+
+    // Slideshow Functionality
+    const slideshow = document.querySelector('.slideshow-container');
+    if (slideshow) {
+        const slides = slideshow.querySelectorAll('.slide');
+        const prevBtn = slideshow.querySelector('.slide-prev');
+        const nextBtn = slideshow.querySelector('.slide-next');
+        const dots = slideshow.querySelectorAll('.slide-dot');
+        let currentIndex = 0;
+        let slideInterval;
+        const intervalTime = 5000; // 5 seconds autoplay
+
+        function showSlide(index) {
+            // Remove active class from current slide and dot
+            slides[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+
+            // Set new index with wrapping
+            currentIndex = (index + slides.length) % slides.length;
+
+            // Add active class to new slide and dot
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Event Listeners for buttons
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+
+        // Event Listeners for dots
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const targetSlide = parseInt(dot.getAttribute('data-slide'));
+                showSlide(targetSlide);
+                resetAutoplay();
+            });
+        });
+
+        // Autoplay logic
+        function startAutoplay() {
+            slideInterval = setInterval(nextSlide, intervalTime);
+        }
+
+        function stopAutoplay() {
+            clearInterval(slideInterval);
+        }
+
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        // Start autoplay on load
+        startAutoplay();
+
+        // Pause on hover
+        slideshow.addEventListener('mouseenter', stopAutoplay);
+        slideshow.addEventListener('mouseleave', startAutoplay);
+    }
 });
