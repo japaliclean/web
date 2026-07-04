@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // Slideshow Functionality
+    // Slideshow Functionality for the solutions section
     const slideshow = document.querySelector('.slideshow-container');
     if (slideshow) {
         const slides = slideshow.querySelectorAll('.slide');
@@ -69,14 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const intervalTime = 5000; // 5 seconds autoplay
 
         function showSlide(index) {
-            // Remove active class from current slide and dot
             slides[currentIndex].classList.remove('active');
             dots[currentIndex].classList.remove('active');
 
-            // Set new index with wrapping
             currentIndex = (index + slides.length) % slides.length;
 
-            // Add active class to new slide and dot
             slides[currentIndex].classList.add('active');
             dots[currentIndex].classList.add('active');
         }
@@ -89,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
             showSlide(currentIndex - 1);
         }
 
-        // Event Listeners for buttons
         nextBtn.addEventListener('click', () => {
             nextSlide();
             resetAutoplay();
@@ -100,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             resetAutoplay();
         });
 
-        // Event Listeners for dots
         dots.forEach(dot => {
             dot.addEventListener('click', () => {
                 const targetSlide = parseInt(dot.getAttribute('data-slide'));
@@ -109,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Autoplay logic
         function startAutoplay() {
             slideInterval = setInterval(nextSlide, intervalTime);
         }
@@ -123,11 +117,61 @@ document.addEventListener('DOMContentLoaded', () => {
             startAutoplay();
         }
 
-        // Start autoplay on load
         startAutoplay();
 
-        // Pause on hover
         slideshow.addEventListener('mouseenter', stopAutoplay);
         slideshow.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Hero Slideshow Functionality
+    const heroSlideshowContainer = document.querySelector('.hero-slideshow-container');
+    if (heroSlideshowContainer) {
+        const heroSlides = heroSlideshowContainer.querySelectorAll('.hero-slide');
+        const heroPrev = heroSlideshowContainer.querySelector('.hero-slide-prev');
+        const heroNext = heroSlideshowContainer.querySelector('.hero-slide-next');
+        let heroIndex = 0;
+        let heroInterval;
+        const heroIntervalTime = 3000; // 3 seconds autoplay
+
+        function showHeroSlide(index) {
+            heroSlides[heroIndex].classList.remove('active');
+            heroIndex = (index + heroSlides.length) % heroSlides.length;
+            heroSlides[heroIndex].classList.add('active');
+        }
+
+        function nextHeroSlide() {
+            showHeroSlide(heroIndex + 1);
+        }
+
+        function prevHeroSlide() {
+            showHeroSlide(heroIndex - 1);
+        }
+
+        heroNext.addEventListener('click', () => {
+            nextHeroSlide();
+            resetHeroAutoplay();
+        });
+
+        heroPrev.addEventListener('click', () => {
+            prevHeroSlide();
+            resetHeroAutoplay();
+        });
+
+        function startHeroAutoplay() {
+            heroInterval = setInterval(nextHeroSlide, heroIntervalTime);
+        }
+
+        function stopHeroAutoplay() {
+            clearInterval(heroInterval);
+        }
+
+        function resetHeroAutoplay() {
+            stopHeroAutoplay();
+            startHeroAutoplay();
+        }
+
+        startHeroAutoplay();
+
+        // No pause on hover - user specified no pause behavior
     }
 });
