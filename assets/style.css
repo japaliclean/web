@@ -41,8 +41,8 @@ body {
 /* Glassmorphism Classes */
 .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
 }
 
@@ -121,7 +121,10 @@ section {
 @media (max-width: 768px) {
     section {
         padding: 110px 5% 40px;
-        min-height: auto;
+        /* min-height:auto is not valid for older browsers */
+    }
+    .hero {
+        padding: 70px 5% 40px;
     }
     .section-spacing {
         padding: 110px 5%;
@@ -145,7 +148,7 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 140px 5% 80px;
+    padding: 90px 5% 60px;
     min-height: 70vh;
 }
 
@@ -417,6 +420,7 @@ h2 {
         width: 80%;
         height: 100vh;
         background: var(--glass-bg);
+        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
