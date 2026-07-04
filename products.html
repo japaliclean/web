@@ -47,8 +47,7 @@
             object-fit: cover;
             border-radius: 4px;
             margin-bottom: 1rem;
-            display: none;
-            /* Hidden until you add the images */
+            display: block;
             border: 1px solid var(--glass-border);
         }
 
@@ -87,61 +86,55 @@
                     style="min-width: auto; padding: 0.5rem 1.5rem; border: 2px solid var(--primary);">All</button>
                 <button class="btn filter-btn" data-filter="machinery"
                     style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Machinery</button>
-                <button class="btn filter-btn" data-filter="housekeeping"
-                    style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Housekeeping</button>
-                <button class="btn filter-btn" data-filter="mops"
-                    style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Mops
-                    &amp; Brushes</button>
-                <button class="btn filter-btn" data-filter="hygiene"
-                    style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Hygiene
-                    Products</button>
+                <button class="btn filter-btn" data-filter="cleaning-chemicals"
+                    style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Cleaning Chemicals</button>
+                <button class="btn filter-btn" data-filter="cleaning-tools"
+                    style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Cleaning Tools</button>
+                <button class="btn filter-btn" data-filter="cleaning-consumables"
+                    style="min-width: auto; padding: 0.5rem 1.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary);">Cleaning Consumables</button>
             </div>
 
             <div class="grid catalog-grid grid-4-col" style="margin-top: 2rem;">
-                <!-- Machinery -->
-                <div class="card glass brutalist catalog-item" data-category="machinery">
-                    <div class="catalog-icon">&#9881;&#65039;</div>
-                    <img src="assets/images/covers/machinery-cover.jpg" alt="Machinery Catalogue Cover"
+                <!-- Cleaning Chemicals -->
+                <div class="card glass brutalist catalog-item" data-category="cleaning-chemicals">
+                    <img src="assets/images/pudt-thumbnails/1 (2).png" alt="Cleaning Chemicals Catalogue Cover"
                         class="catalog-cover">
-                    <h3>Machinery Catalogue</h3>
-                    <p>Heavy-duty scrubbers, vacuum cleaners, and janitorial trolleys.</p>
-                    <a href="assets/products/1_Machinery_Catalogue.pdf" target="_blank" class="btn brutalist"
-                        style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View
-                        / Download</a>
-                </div>
-
-                <!-- Housekeeping -->
-                <div class="card glass brutalist catalog-item" data-category="housekeeping">
-                    <div class="catalog-icon">🧹</div>
-                    <img src="assets/images/covers/housekeeping-cover.jpg" alt="Housekeeping Catalogue Cover"
-                        class="catalog-cover">
-                    <h3>Housekeeping Catalogue</h3>
+                    <h3>Cleaning Chemicals Catalogue</h3>
                     <p>Essential cleaning supplies, chemicals, and everyday maintenance tools.</p>
                     <a href="assets/products/2_Housekeeping_Catalogue.pdf" target="_blank" class="btn brutalist"
                         style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View
                         / Download</a>
                 </div>
 
-                <!-- Mops & Brushes -->
-                <div class="card glass brutalist catalog-item" data-category="mops">
-                    <div class="catalog-icon">🧽</div>
-                    <img src="assets/images/covers/mops-cover.jpg" alt="Mops & Brushes Catalogue Cover"
+                <!-- Cleaning Tools -->
+                <div class="card glass brutalist catalog-item" data-category="cleaning-tools">
+                    <img src="assets/images/pudt-thumbnails/1 (3).png" alt="Cleaning Tools Catalogue Cover"
                         class="catalog-cover">
-                    <h3>Mops &amp; Brushes Catalogue</h3>
+                    <h3>Cleaning Tools Catalogue</h3>
                     <p>Ergonomic mops, wipers, and specialized brushes for efficient manual cleaning.</p>
                     <a href="assets/products/3_Mops_and_Brushes_Catalogue.pdf" target="_blank" class="btn brutalist"
                         style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View
                         / Download</a>
                 </div>
 
-                <!-- Hygiene Products -->
-                <div class="card glass brutalist catalog-item" data-category="hygiene">
-                    <div class="catalog-icon">🧴</div>
-                    <img src="assets/images/covers/hygiene-cover.jpg" alt="Hygiene Products Catalogue Cover"
+                <!-- Cleaning Consumables -->
+                <div class="card glass brutalist catalog-item" data-category="cleaning-consumables">
+                    <img src="assets/images/pudt-thumbnails/1 (4).png" alt="Cleaning Consumables Catalogue Cover"
                         class="catalog-cover">
-                    <h3>Hygiene Products Catalogue</h3>
+                    <h3>Cleaning Consumables Catalogue</h3>
                     <p>Premium HRT rolls, C-fold tissues, and personal care disinfection.</p>
                     <a href="assets/products/4_Hygiene_Products_Catalogue.pdf" target="_blank" class="btn brutalist"
+                        style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View
+                        / Download</a>
+                </div>
+
+                <!-- Machinery -->
+                <div class="card glass brutalist catalog-item" data-category="machinery">
+                    <img src="assets/images/pudt-thumbnails/1 (1).png" alt="Machinery Catalogue Cover"
+                        class="catalog-cover">
+                    <h3>Machinery Catalogue</h3>
+                    <p>Heavy-duty scrubbers, vacuum cleaners, and janitorial trolleys.</p>
+                    <a href="assets/products/1_Machinery_Catalogue.pdf" target="_blank" class="btn brutalist"
                         style="width: 100%; margin-top: 1rem; text-align: center; color: white; padding: 0.8rem; min-width: auto; font-size: 0.8rem; text-decoration: none;">View
                         / Download</a>
                 </div>

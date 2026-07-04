@@ -56,56 +56,66 @@
 
     <main>
         <section class="hero">
+            <div class="glass brutalist hero-slideshow-box">
+                <div class="hero-slideshow-container">
+                    <div class="hero-slides-wrapper">
+                        <div class="hero-slide active">
+                            <img src="assets/images/hero-slideshow/slide1.png" alt="JAPALI Cleaning Solutions 1">
+                        </div>
+                        <div class="hero-slide">
+                            <img src="assets/images/hero-slideshow/slide2.png" alt="JAPALI Cleaning Solutions 2">
+                        </div>
+                        <div class="hero-slide">
+                            <img src="assets/images/hero-slideshow/slide3.png" alt="JAPALI Cleaning Solutions 3">
+                        </div>
+                    </div>
 
-            <div class="glass brutalist" style="padding: 2.5rem; max-width: 800px;">
-                <h1><span style="color: var(--primary);">JAPALI</span></h1>
-                <p>Welcome to JAPALI. We engineer professional-grade cleaning systems. From advanced chemicals to
-                    heavy-duty machinery, we provide the blueprint for a spotless environment.</p>
-                <div class="hero-btns">
-                    <a href="products" class="btn brutalist">Explore Products</a>
-                    <a href="contact" class="btn brutalist"
-                        style="background: transparent; color: var(--primary); border: 3px solid var(--primary);">Get a
-                        Quote</a>
+                    <!-- Navigation Arrows -->
+                    <button class="hero-slide-btn hero-slide-prev" aria-label="Previous Slide">❮</button>
+                    <button class="hero-slide-btn hero-slide-next" aria-label="Next Slide">❯</button>
+                </div>
+
+                <div class="hero-content">
+                    <div class="hero-btns">
+                        <a href="products" class="btn brutalist">Explore Products</a>
+                        <a href="contact" class="btn brutalist btn-outline-primary">Get a Quote</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="features">
-            <h2 style="text-align: center;">Our Core <span style="color: var(--primary);">Categories</span></h2>
+            <h2 class="text-center">Our Core <span class="text-primary">Categories</span></h2>
             <div class="grid grid-2-col">
                 <div class="card glass brutalist">
                     <h3>Cleaning Chemicals</h3>
                     <p>Eco-friendly, powerful formulas designed for industrial, kitchen, and personal care disinfection.
                     </p>
-                    <a href="products#chemicals"
-                        style="color: var(--primary); font-weight: bold; text-decoration: none;">View Specs →</a>
+                    <a href="products#chemicals" class="footer-link text-primary text-bold">View Specs →</a>
                 </div>
                 <div class="card glass brutalist">
                     <h3>Cleaning Tools</h3>
                     <p>Ergonomic mops, wipers, and specialized brushes for efficient manual cleaning.</p>
-                    <a href="products#tools"
-                        style="color: var(--primary); font-weight: bold; text-decoration: none;">View Specs →</a>
+                    <a href="products#tools" class="footer-link text-primary text-bold">View Specs →</a>
+                </div>
+                <div class="card glass brutalist">
+                    <h3>Cleaning Consumables</h3>
+                    <p>High-performance wipes, mop refills, and disposable cloths built for hygienic, fast facility maintenance.</p>
+                    <a href="products#tissues" class="footer-link text-primary text-bold">View Specs →</a>
                 </div>
                 <div class="card glass brutalist">
                     <h3>Machinery</h3>
                     <p>Heavy-duty scrubbers, vacuum cleaners, and janitorial trolleys for large-scale facilities.</p>
-                    <a href="products#machinery"
-                        style="color: var(--primary); font-weight: bold; text-decoration: none;">View Specs →</a>
-                </div>
-                <div class="card glass brutalist">
-                    <h3>Tissues & Paper</h3>
-                    <p>Premium HRT rolls, C-fold tissues, and facial tissues for hospitality and corporate sectors.</p>
-                    <a href="products#tissues"
-                        style="color: var(--primary); font-weight: bold; text-decoration: none;">View Specs →</a>
+                    <a href="products#machinery" class="footer-link text-primary text-bold">View Specs →</a>
                 </div>
             </div>
         </section>
 
-        <section class="section-spacing" style="background: rgba(224, 82, 38, 0.05);">
+        <section class="section-spacing bg-soft-primary">
             <div class="split-grid">
                 <div>
                     <h2>Smart Solutions for <br class="hide-mobile">Modern Spaces</h2>
-                    <p style="margin: 2rem 0;">We don't just sell products; we design systems. Our solutions are
+                    <p class="section-copy">We don't just sell products; we design systems. Our solutions are
                         optimized for manufacturing, hospitality, and healthcare sectors to ensure maximum hygiene with
                         minimum strain.</p>
                     <a href="solutions" class="btn brutalist">Discover Solutions</a>
@@ -138,39 +148,37 @@
         </section>
     </main>
 
-    <footer class="glass" style="padding: 4rem 10%; border-top: 1px solid var(--glass-border); margin-top: 4rem;">
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem;">
+    <footer class="glass footer-glass">
+        <div class="footer-grid">
             <div>
-                <a href="./" class="logo" style="margin-bottom: 1rem;">
+                <a href="./" class="logo footer-logo">
                     <img src="assets/images/logo%20final.png" alt="JAPALI Logo">
                 </a>
                 <p>Engineering cleanliness since 2024. Your partner in premium hygiene systems.</p>
             </div>
             <div>
-                <h4 style="margin-bottom: 1rem;">Pages</h4>
-                <ul style="list-style: none;">
-                    <li><a href="./" style="color: #888; text-decoration: none;">Home</a></li>
-                    <li><a href="products" style="color: #888; text-decoration: none;">Products</a></li>
-                    <li><a href="solutions" style="color: #888; text-decoration: none;">Solutions</a></li>
+                <h4 class="footer-heading">Pages</h4>
+                <ul class="no-list">
+                    <li><a href="./" class="footer-link text-muted">Home</a></li>
+                    <li><a href="products" class="footer-link text-muted">Products</a></li>
+                    <li><a href="solutions" class="footer-link text-muted">Solutions</a></li>
                 </ul>
             </div>
             <div>
-                <h4 style="margin-bottom: 1rem;">Contact</h4>
-                <p style="color: #888;"><a href="mailto:japali.hyd@gmail.com"
-                        style="color: inherit; text-decoration: none;">japali.hyd@gmail.com</a></p>
-                <p style="color: #888;"><a href="tel:+916305833369" style="color: inherit; text-decoration: none;">+91
+                <h4 class="footer-heading">Contact</h4>
+                <p class="text-muted"><a href="mailto:japali.hyd@gmail.com" class="footer-link link-inherit">japali.hyd@gmail.com</a></p>
+                <p class="text-muted"><a href="tel:+916305833369" class="footer-link link-inherit">+91
                         63058 33369</a></p>
             </div>
             <div>
-                <h4 style="margin-bottom: 1rem;">Social</h4>
-                <p style="color: #888;">Instagram</p>
-                <p style="color: #888;">LinkedIn</p>
+                <h4 class="footer-heading">Social</h4>
+                <p class="text-muted"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="footer-link link-inherit">Instagram</a></p>
+                <p class="text-muted"><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="footer-link link-inherit">YouTube</a></p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 4rem; color: #555; font-size: 0.8rem;">
-            &copy; 2026 JAPALI. All Rights Received. <br style="margin-top: 0.5rem;"> Project by- <a
-                href="https://wa.me/917207667827" target="_blank" rel="noopener noreferrer"
-                style="color: var(--primary); text-decoration: none;">Ithish Jonnes</a>
+        <div class="footer-note">
+            &copy; 2026 JAPALI. All Rights Received. <br class="footer-note-break"> Project by- <a
+                href="https://wa.me/917207667827" target="_blank" rel="noopener noreferrer" class="footer-link text-primary">Ithish Jonnes</a>
         </div>
     </footer>
 
