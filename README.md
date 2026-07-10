@@ -117,5 +117,5 @@ You can also open the `index.html` file directly in any modern browser by double
 
 ## 🤝 Contact & Engineering Team
 * **Email**: [japali.hyd@gmail.com](mailto:japali.hyd@gmail.com)
-* **Phone**: [+91 63058 33369](tel:+916305833369)
+* **Phone**: [+91 63058 33369](tel:+917207667827)
 * **Web Developer**: [Ithish Jonnes](https://wa.me/917207667827)
